@@ -39,9 +39,9 @@ fx = ForeignExchange(key= api_key, output_format = "pandas")
 #idata = data.reset_index()
 #balance = list(mt5.account_info())[10]
 
-login0 = 888010
-password0 = "i5MNKeP7"
-server0 = "VantageInternational-Demo"
+login0 = "Insert MT5 Login"
+password0 = "Insert MT5 Password"
+server0 = "Insert MT5 Broker Server"
 
 order_blocks = {}
 lowest_lows_highest_highs = {}

@@ -1,3 +1,7 @@
+"This code is used in conjunction with historical data to simulate the profit of the Complete Automated Trader. The simulation is not exact and assumes a
+loss when there is no way to check whether there is profit or loss but is useful nonetheless.
+"
+
 start.time <- Sys.time()
 x <- read.csv("C:/Users/Grego/Downloads/EURUSD_M1.csv")
 

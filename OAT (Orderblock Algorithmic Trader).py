@@ -5,6 +5,24 @@ Created on Thu Feb 17 11:33:23 2022
 @author: Grego
 """
 
+"""
+This algorithm is a variant of Complete Automated Trader that trades in both bias directions (long and short), but has the ability customize trades placed,
+something that Complete Automated Trader cannot do. These two projects can be merged to form a more general algorithm that can have a specific directional 
+bias as well as the ability to customize the trades placed on these order blocks.
+
+This script is an automated trading algorithm that seeks to find candlestick patterns called "order blocks" as soon as they are formed and places
+orders on them.
+
+1. For each given ("pair", comboList) tuple, previous unfilled order blocks on that pair will be found for both directions. Then trades will be placed on each
+of these order blocks.
+2. Then in real time, 5 minutes after the closing time of each 1 hour candlestick (5 minutes after since the real time data is provided 5 minutes after
+the start of the new hour), for each "pair", it checks if a new order block has formed; if there is a new order block, trades are placed according to comboList,
+otherwise it waits and updates an relevant information stored. This is repeated indefinitely.
+
+The output of this algorithm has been replicated on RStudio code. Thus far it has been shown to be profitable under certain conditions and unprofitable in 
+others.
+"""
+
 import numpy as np
 import pandas as pd
 import MetaTrader5 as mt5
@@ -30,6 +48,9 @@ lowest_lows_highest_highs = {}
 risk = 0.01
 
 pair_list = [("EURUSD+", [[1,1,1]]), ("USDJPY+", [[1,0.5,0.75]]), ("AUDUSD+", [[1,1,1]]), ("GBPUSD+", [[1,0.75,1]]), ("USDCHF+", [[1,1,1]])]
+# pair_list entries have the form ("pair", combo_list). combo_list entries have the form [rewardRatio, entry_depth, sl_depth] where rewardRatio
+# is the reward-to-risk ratio; entry_depth is how far into the order block your entry is placed and sl_depth is how far into the order block the
+# stop loss is placed.
     
 def lot_size(pair, stop_loss_distance, risk):
     mt5.initialize(login=login0, password=password0, server=server0)

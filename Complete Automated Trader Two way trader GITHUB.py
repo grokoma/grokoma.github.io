@@ -4,6 +4,22 @@ Created on Thu Feb 17 11:33:23 2022
 
 @author: Grego
 """
+"""
+This script is an automated trading algorithm that seeks to find candlestick patterns called "order blocks" as soon as they are formed and places
+orders on them.
+
+1. For each given ("pair", "bias") tuple, previous unfilled order blocks on that pair will be found for the "bias" direction. Then trades will be placed on each
+of these order blocks.
+2. Then in real time, 5 minutes after the closing time of each 1 hour candlestick (5 minutes after since the real time data is provided 5 minutes after
+the start of the new hour), for each ("pair", "bias") tuple, it checks if a new order block has formed; if there is a new order block, trades are placed,
+otherwise it waits and updates an relevant information stored. This is repeated indefinitely.
+
+The output of this algorithm has been replicated on RStudio code. Thus far it has been shown to be profitable under certain conditions and unprofitable in 
+others.
+"""
+
+
+
 
 import numpy as np
 import pandas as pd

@@ -1,20 +1,17 @@
-# grokoma.github.io
+#Automated Trading Algorithm for Forex and Crypto
 
-# Education
-- MSci Hons, Mathematics @ Lancaster University
-- Variational Inference for Bayesian Posterior Approximation @ Lancaster University
+#Overview
+This repository hosts a collection of scripts for automated trading based on the identification of H1 order blocks in Forex and cryptocurrency markets. The algorithms are designed to detect key price levels and execute trades based on these patterns, offering a systematic approach to trading.
 
-# Projects/Work Experience
-- A-Level/GCSE Math Tutor	@ GoStudent
-- -	Conduct one-on-one tutoring sessions for GCSE and A-Level Math students.
-  -	Utilize online platforms to facilitate interactive and engaging learning experiences.
-  -	Track students’ progress and provide feedback constructively to help them achieve their academic goals.
-  -	Collaborate with parents and other tutors to identify students’ weaknesses to design effective strategies for improvement.
-  -	Assist students with homework and exam preparations, problem-solving skills and critical thinking.
-- Diophantine Approximation Project
-- - Executed the algebra component of the project and audited teammates' work for accuracy.
-  - Delivered tasks within tight deadlines, upholding high standards to support the team in achieving the highest grade possible.
-# Certifications, skills & interests
-- Certifications: Senior Mathematics Challenge Silver; Senior Mathematics Challenge Bronze; Intermediate Mathematics Challenge Gold; GoStudent Tutor Certificate for 200 lessons.
-- Skills: Python; RStudio; Microsoft Office (Excel, Word, PowerPoint); Proficient in online tutoring platforms (e.g., Zoom, Google Meet); Adaptability to various learning styles; Strong communication and interpersonal skills; Problem-solving and critical thinking.
-- Interests: rugby; weightlifting; chess.
+#Contents
+Complete Automated Trader GITHUB.py: The core automated trading algorithm that identifies H1 order blocks on a Forex or cryptocurrency pair. This script supports two-way trading, allowing for both long and short positions based on detected order blocks.
+
+OAT (Orderblock Algorithmic Trader).py: A variant of the Complete Automated Trader with modified strategies for order block identification and trade execution.
+
+stop method calculator.R: A script written in R that simulates the profit and performance of the Complete Automated Trader (GITHUB.py). This helps in evaluating the effectiveness of the trading algorithm under different conditions.
+
+Features
+H1 Order Block Detection: Identifies order blocks on the 1-hour timeframe, widely used by retail traders for decision-making.
+Forex and Crypto Support: Compatible with various Forex pairs and cryptocurrency pairs.
+Two-Way Trading: Capable of executing trades in both directions, depending on the market conditions.
+Performance Simulation: stop method calculator.R provides a simulated analysis of the trading strategy’s profitability.

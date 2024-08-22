@@ -1,8 +1,8 @@
 # grokoma.github.io
 
 # Education
-- MSci Hons, Mathematics @ Lancaster University - Awaiting result.
-- Variational Inference for Bayesian Posterior Approximation @ Lancaster University – Awaiting result.
+- MSci Hons, Mathematics @ Lancaster University
+- Variational Inference for Bayesian Posterior Approximation @ Lancaster University
 
 # Projects/Work Experience
 - A-Level/GCSE Math Tutor	@ GoStudent
